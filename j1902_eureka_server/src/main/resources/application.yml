@@ -1,0 +1,18 @@
+
+server:
+  port: 9090
+eureka:
+  instance:
+    hostname: localhost
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+    fetchRegistry: false
+    registerWithEureka: false
+    healthcheck:
+      enabled: true
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 400
