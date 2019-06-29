@@ -1,0 +1,14 @@
+
+server:
+  port: 9092
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/xiaoyu?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password:
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.zhaoguolin.springboot_shiro.pojo
